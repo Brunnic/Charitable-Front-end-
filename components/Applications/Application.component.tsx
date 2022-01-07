@@ -78,17 +78,19 @@ const Application: React.FC<ApplicationComponentProps> = ({
     };
 
     const handleDonating = async () => {
-        setLoading(true);
-        try {
-            await donate(applicant.address, amount, message);
-            setLoading(false);
-        } catch (error) {
-            console.log(error);
-            setLoading(false);
+        if (donate) {
+            setLoading(true);
+            try {
+                await donate(applicant.address, amount, message);
+                setLoading(false);
+            } catch (error) {
+                console.log(error);
+                setLoading(false);
+            }
+            setOpen(false);
+            setAmount("0");
+            setMessage("");
         }
-        setOpen(false);
-        setAmount("0");
-        setMessage("");
     };
 
     return (
