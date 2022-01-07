@@ -1,8 +1,13 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import "../styles/globals.css";
+import type { AppProps } from "next/app";
+import { BlockchainProvider } from "../contexts/BlockchainContext";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+    return (
+        <BlockchainProvider>
+            <Component {...pageProps} />
+        </BlockchainProvider>
+    );
 }
 
-export default MyApp
+export default MyApp;
