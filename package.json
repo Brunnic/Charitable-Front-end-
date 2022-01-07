@@ -1,7 +1,6 @@
 {
     "name": "charitable",
     "author": "Akram Annachachibi",
-    "private": true,
     "scripts": {
         "dev": "next dev",
         "build": "next build",
