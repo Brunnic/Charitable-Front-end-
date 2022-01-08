@@ -59,11 +59,6 @@ const Navbar: React.FC = () => {
                             Applications
                         </Typography>
                     </Link>
-                    <Link href="/about" underline="none">
-                        <Typography variant="h6" color="white">
-                            About Us
-                        </Typography>
-                    </Link>
                     {isAdmin && (
                         <Link href="/admin" underline="none">
                             <Typography variant="h6" color="white">
@@ -153,11 +148,6 @@ const Navbar: React.FC = () => {
                         <Link href="/applications" underline="none">
                             <Typography variant="body1" color="black">
                                 Applications
-                            </Typography>
-                        </Link>
-                        <Link href="/about" underline="none">
-                            <Typography variant="body1" color="black">
-                                About Us
                             </Typography>
                         </Link>
                         {isAdmin && (
